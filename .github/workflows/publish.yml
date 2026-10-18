@@ -15,7 +15,7 @@ on:
 jobs:
   publish:
     runs-on: ubuntu-latest
-    environment: pypi
+    environment: ${{ github.event.inputs.package == 'myrmidon-core' && 'pypi-core' || github.event.inputs.package == 'myrmidon-cli' && 'pypi-cli' || 'pypi' }}
     permissions:
       id-token: write
     steps:
