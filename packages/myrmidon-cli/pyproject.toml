@@ -1,0 +1,22 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "myrmidon-cli"
+version = "0.0.1"
+description = "MYRMIDON CLI (placeholder)"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "MYRMIDON Team" }]
+requires-python = ">=3.9"
+keywords = ["myrmidon", "ai", "cli"]
+
+[project.urls]
+Homepage = "https://github.com/myrmidon-ai"
+
+[project.scripts]
+myrmidon = "myrmidon_cli.__main__:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/myrmidon_cli"]

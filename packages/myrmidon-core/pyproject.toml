@@ -1,0 +1,19 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "myrmidon-core"
+version = "0.0.1"
+description = "MYRMIDON core library (placeholder)"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "MYRMIDON Team" }]
+requires-python = ">=3.9"
+keywords = ["myrmidon", "ai", "core"]
+
+[project.urls]
+Homepage = "https://github.com/myrmidon-ai"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/myrmidon_core"]
